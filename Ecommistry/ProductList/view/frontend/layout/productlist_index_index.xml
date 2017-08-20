@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	 <update handle="customer_account"/>
+	<body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Ecommistry ProductList</argument>
+            </action>
+         </referenceBlock>
+         <referenceContainer name="content">
+            <block class="Ecommistry\ProductList\Block\ProductList" name="index.index" template="Ecommistry_ProductList::index/index.phtml" >
+			  <block class="Ecommistry\ProductList\Block\Product\ProductList\Toolbar" name="product_list_toolbar" template="Ecommistry_ProductList::product/list/toolbar.phtml">
+                        <block class="Magento\Theme\Block\Html\Pager" name="product_list_toolbar_pager"/>
+                        <!-- The following code shows how to set your own pager increments -->
+                        <!--
+                            <action method="setDefaultListPerPage">
+                            <argument name="limit" xsi:type="string">4</argument>
+                        </action>
+                        <action method="setDefaultGridPerPage">
+                            <argument name="limit" xsi:type="string">3</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">list</argument>
+                            <argument name="limit" xsi:type="string">2</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">list</argument>
+                            <argument name="limit" xsi:type="string">4</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">list</argument>
+                            <argument name="limit" xsi:type="string">6</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">list</argument>
+                            <argument name="limit" xsi:type="string">8</argument>
+                        </action>
+                        <action method="addPagerLimit" translate="label">
+                            <argument name="mode" xsi:type="string">list</argument>
+                            <argument name="limit" xsi:type="string">all</argument>
+                            <argument name="label" xsi:type="string">All</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">grid</argument>
+                            <argument name="limit" xsi:type="string">3</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">grid</argument>
+                            <argument name="limit" xsi:type="string">6</argument>
+                        </action>
+                        <action method="addPagerLimit">
+                            <argument name="mode" xsi:type="string">grid</argument>
+                            <argument name="limit" xsi:type="string">9</argument>
+                        </action>
+                        <action method="addPagerLimit" translate="label">
+                            <argument name="mode" xsi:type="string">grid</argument>
+                            <argument name="limit" xsi:type="string">all</argument>
+                            <argument name="label" xsi:type="string">All</argument>
+                        </action>
+                        -->
+                    </block>
+                    <action method="setToolbarBlockName">
+                        <argument name="name" xsi:type="string">product_list_toolbar</argument>
+                    </action>
+			
+			</block>
+        </referenceContainer>
+    </body>
+	<!-- <body>
+		<referenceContainer name="content">
+			<block class="Ecommistry\ProductList\Block\Index\Index" name="index.index" template="Ecommistry_ProductList::index/index.phtml"/>
+		</referenceContainer>
+	</body> -->
+</page>

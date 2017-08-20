@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Magehit_Featuredproducts::featuredproducts_settings" title="Featuredproducts" module="Magehit_Featuredproducts" sortOrder="10" parent="Magehit_Core::view" action="adminhtml/system_config/edit/section/featuredproducts_settings" resource="Magehit_Featuredproducts::featuredproducts"/>
+	</menu>
+</config>
